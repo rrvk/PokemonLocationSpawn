@@ -1,4 +1,4 @@
-package nl.rrvk.pokemonlocationspawn.fragments;
+package nl.rrvk.pokemonspawnlocation.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import nl.rrvk.pokemonlocationspawn.MainActivity;
-import nl.rrvk.pokemonlocationspawn.R;
-import nl.rrvk.pokemonlocationspawn.utils.ActivityUtils;
+import nl.rrvk.pokemonspawnlocation.MainActivity;
+import nl.rrvk.pokemonspawnlocation.R;
+import nl.rrvk.pokemonspawnlocation.utils.ActivityUtils;
 
-public class HomeFragment extends Fragment {
+public class WebFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-        ActivityUtils.setActionbarTitles((MainActivity) getActivity(), R.string.nav_pokevision, null);
+        //ActivityUtils.setActionbarTitles((MainActivity) getActivity(), R.string.nav_pokevision, null);
 
         WebView myWebView = (WebView) v.findViewById(R.id.webview);
         WebSettings webSettings = myWebView.getSettings();

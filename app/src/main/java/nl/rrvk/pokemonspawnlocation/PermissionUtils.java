@@ -1,4 +1,4 @@
-package nl.rrvk.pokemonlocationspawn;
+package nl.rrvk.pokemonspawnlocation;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -10,7 +10,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
-
 
 /**
  * Utility class for access to runtime permissions.
@@ -30,7 +29,6 @@ public abstract class PermissionUtils {
         } else {
             // Location permission has not been granted yet, request it.
             ActivityCompat.requestPermissions(activity, new String[]{permission}, requestId);
-
         }
     }
 

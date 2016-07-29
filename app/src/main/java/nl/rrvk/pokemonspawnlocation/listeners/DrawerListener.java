@@ -1,4 +1,4 @@
-package nl.rrvk.pokemonlocationspawn.listeners;
+package nl.rrvk.pokemonspawnlocation.listeners;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import nl.rrvk.pokemonlocationspawn.R;
-import nl.rrvk.pokemonlocationspawn.utils.FragmentUtils;
-import nl.rrvk.pokemonlocationspawn.factories.FragmentFactory;
+import nl.rrvk.pokemonspawnlocation.R;
+import nl.rrvk.pokemonspawnlocation.utils.FragmentUtils;
+import nl.rrvk.pokemonspawnlocation.factories.FragmentFactory;
 
 public class DrawerListener implements View.OnClickListener {
 

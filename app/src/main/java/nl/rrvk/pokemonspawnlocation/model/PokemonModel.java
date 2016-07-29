@@ -1,22 +1,32 @@
-package nl.rrvk.pokemonlocationspawn.model;
+package nl.rrvk.pokemonspawnlocation.model;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 
 public class PokemonModel {
-    private String id;
+    private String markerId;
     private Long expTime;
     private String pokeId;
     private LatLng location;
 
-    public PokemonModel(String id, Long expTime, String pokeId, LatLng location) {
-        this.id = id;
+    public PokemonModel(String markerId, Long expTime, String pokeId, LatLng location) {
+        this.markerId = markerId;
         this.expTime = expTime;
         this.pokeId = pokeId;
         this.location = location;
     }
+    public Marker getMarker() {
+        return marker;
+    }
 
-    public String getId() {
-        return id;
+    public void setMarker(Marker marker) {
+        this.marker = marker;
+    }
+
+    private Marker marker;
+
+    public String getMarkerId() {
+        return markerId;
     }
 
     public Long getExpTime() {
@@ -43,8 +53,6 @@ public class PokemonModel {
     public int getRemainingSec() {
         return (int) getTimeLeft() - (getRemainingMin() * 60);
     }
-
-    ;
 
     public String getTimeLeftFormat() {
         return String.format("%d min, %d sec", getRemainingMin(), getRemainingSec());

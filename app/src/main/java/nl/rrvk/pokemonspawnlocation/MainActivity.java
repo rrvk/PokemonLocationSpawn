@@ -1,6 +1,8 @@
-package nl.rrvk.pokemonlocationspawn;
+package nl.rrvk.pokemonspawnlocation;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.support.multidex.MultiDex;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -10,13 +12,10 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import nl.rrvk.pokemonlocationspawn.adapter.DrawerAdapter;
-import nl.rrvk.pokemonlocationspawn.fragments.MapFragment;
-import nl.rrvk.pokemonlocationspawn.listeners.DrawerListener;
-import nl.rrvk.pokemonlocationspawn.utils.FragmentUtils;
-
-import net.hockeyapp.android.CrashManager;
-import net.hockeyapp.android.UpdateManager;
+import nl.rrvk.pokemonspawnlocation.adapter.DrawerAdapter;
+import nl.rrvk.pokemonspawnlocation.fragments.MapFragment;
+import nl.rrvk.pokemonspawnlocation.listeners.DrawerListener;
+import nl.rrvk.pokemonspawnlocation.utils.FragmentUtils;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -26,17 +25,10 @@ public class MainActivity extends AppCompatActivity {
     private String[] mDrawerItems;
     private FragmentManager mFragmentManager;
 
-    private void checkForCrashes() {
-        CrashManager.register(this);
-    }
-
-    private void checkForUpdates() {
-        // Remove this for store builds!
-        UpdateManager.register(this);
-    }
-
-    private void unregisterManagers() {
-        UpdateManager.unregister();
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 
     @Override
@@ -47,26 +39,21 @@ public class MainActivity extends AppCompatActivity {
         initDrawer();
         initToolbar();
         determineFragment();
-        checkForUpdates();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        // ... your own onResume implementation
-        checkForCrashes();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        unregisterManagers();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        unregisterManagers();
     }
 
     private void determineFragment() {

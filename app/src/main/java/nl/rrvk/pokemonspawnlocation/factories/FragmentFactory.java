@@ -1,11 +1,11 @@
-package nl.rrvk.pokemonlocationspawn.factories;
+package nl.rrvk.pokemonspawnlocation.factories;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 
-import nl.rrvk.pokemonlocationspawn.R;
-import nl.rrvk.pokemonlocationspawn.fragments.HomeFragment;
-import nl.rrvk.pokemonlocationspawn.fragments.MapFragment;
+import nl.rrvk.pokemonspawnlocation.R;
+import nl.rrvk.pokemonspawnlocation.fragments.WebFragment;
+import nl.rrvk.pokemonspawnlocation.fragments.MapFragment;
 
 public class FragmentFactory {
 
@@ -26,9 +26,9 @@ public class FragmentFactory {
     public Fragment createFragment(String item) {
         Fragment toReturn = null;
         // TODO get existing fragment with fragmentManager;
-        if (equals(R.string.nav_pokevision, item)) {
-            toReturn = new HomeFragment();
-        } else if (equals(R.string.nav_map, item)) {
+        /*if (equals(R.string.nav_pokevision, item)) {
+            toReturn = new WebFragment();
+        } else */if (equals(R.string.nav_map, item)) {
             toReturn = new MapFragment();
         } /*else if (equals(R.string.nav_observations, item)) {
             toReturn = new ObservationFragment();

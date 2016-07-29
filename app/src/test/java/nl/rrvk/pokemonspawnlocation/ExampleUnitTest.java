@@ -1,4 +1,4 @@
-package nl.rrvk.pokemonlocationspawn;
+package nl.rrvk.pokemonspawnlocation;
 
 import org.junit.Test;
 

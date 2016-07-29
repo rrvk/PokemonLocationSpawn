@@ -1,12 +1,11 @@
-package nl.rrvk.pokemonlocationspawn.utils;
+package nl.rrvk.pokemonspawnlocation.utils;
 
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import nl.rrvk.pokemonlocationspawn.R;
-
+import nl.rrvk.pokemonspawnlocation.R;
 
 public class FragmentUtils {
     private static final int contentFrame = R.id.content_frame;

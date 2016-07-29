@@ -1,4 +1,4 @@
-package nl.rrvk.pokemonlocationspawn.adapter;
+package nl.rrvk.pokemonspawnlocation.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import nl.rrvk.pokemonlocationspawn.R;
+import nl.rrvk.pokemonspawnlocation.R;
 
 public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.Holder> {
 

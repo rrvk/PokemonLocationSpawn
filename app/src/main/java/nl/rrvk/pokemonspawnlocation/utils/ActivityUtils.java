@@ -1,4 +1,4 @@
-package nl.rrvk.pokemonlocationspawn.utils;
+package nl.rrvk.pokemonspawnlocation.utils;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import org.apache.commons.lang3.StringUtils;
 
-import nl.rrvk.pokemonlocationspawn.MainActivity;
+import nl.rrvk.pokemonspawnlocation.MainActivity;
 
 /**
  * Created by Paulien on 28-10-2015.
