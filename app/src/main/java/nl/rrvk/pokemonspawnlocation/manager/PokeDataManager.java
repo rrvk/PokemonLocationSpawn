@@ -110,10 +110,9 @@ public class PokeDataManager {
                         for (int i = 0; i < jsonArrPokemons.length(); i++) {
                             JSONObject jsonObjPokemon = jsonArrPokemons.getJSONObject(i);
                             // get the different opties in the api
-                            Boolean alive = jsonObjPokemon.getBoolean(con.getString(R.string.api_pokemon_is_alive));
                             String markerId = jsonObjPokemon.getString(con.getString(R.string.api_pokemon_marker_id));
                             // if the pokemon is alive and there is no marker for the pokemon
-                            if (alive && !pokemonAndMarkers.containsKey(markerId)) {
+                            if (!pokemonAndMarkers.containsKey(markerId)) {
                                 String pokemonId = jsonObjPokemon.getString(con.getString(R.string.api_pokemon_pokemon_id));
                                 Double lat = jsonObjPokemon.getDouble(con.getString(R.string.api_pokemon_latitude));
                                 Double lng = jsonObjPokemon.getDouble(con.getString(R.string.api_pokemon_longitude));

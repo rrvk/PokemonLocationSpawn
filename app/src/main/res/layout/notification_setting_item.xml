@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingBottom="@dimen/drawer_item_padding"
+    android:paddingTop="@dimen/drawer_item_padding">
+
+    <ImageView
+        android:id="@+id/notification_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/notification_icon_margin_left"
+        android:src="@android:drawable/ic_delete" />
+
+    <TextView
+        android:id="@+id/notification_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/notification_text_margin_left"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/notification_item_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/notification_check1_margin_left"
+        android:layout_centerVertical="true"
+        android:text="@string/radio_noti"
+        android:checked="true"/>
+
+    <CheckBox
+        android:id="@+id/notification_item_on_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/notification_check2_margin_left"
+        android:layout_centerVertical="true"
+        android:text="@string/radio_map"
+        android:checked="true"/>
+</RelativeLayout>

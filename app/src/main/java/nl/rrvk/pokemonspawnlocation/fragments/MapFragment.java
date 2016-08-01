@@ -74,7 +74,10 @@ public class MapFragment extends Fragment implements LocationListener, OnMapRead
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        pokeDataManager = new PokeDataManager(this.getContext());
+        // create the pokedatamanger if it isn't already existing
+        if (pokeDataManager==null) {
+            pokeDataManager = new PokeDataManager(this.getContext());
+        }
         //todo dit nog anders doen
         if (view != null) {
             ViewGroup parent = (ViewGroup) view.getParent();
@@ -184,7 +187,7 @@ public class MapFragment extends Fragment implements LocationListener, OnMapRead
                 if (!pokemon.timesUp()) {
                     if (markerClicked && pokeeMarkerWhatIsChecked != null) {
                         if (pokeeMarkerWhatIsChecked.equals(entry.getValue())) {
-                            pokemon.getMarker().setSnippet(R.string.marker_text+ pokemon.getTimeLeftFormat());
+                            pokemon.getMarker().setSnippet(getResources().getString(R.string.marker_text)+ pokemon.getTimeLeftFormat());
                             // this so the snippet is reloaded
                             pokemon.getMarker().hideInfoWindow();
                             pokemon.getMarker().showInfoWindow();
@@ -205,7 +208,7 @@ public class MapFragment extends Fragment implements LocationListener, OnMapRead
         if (poke!=null){
             markerClicked = true;
             pokeeMarkerWhatIsChecked = poke;
-            poke.getMarker().setSnippet(R.string.marker_text + poke.getTimeLeftFormat());
+            poke.getMarker().setSnippet(getResources().getString(R.string.marker_text) + poke.getTimeLeftFormat());
         }
         return false;
     }

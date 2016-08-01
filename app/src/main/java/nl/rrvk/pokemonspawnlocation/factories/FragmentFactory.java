@@ -4,8 +4,8 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 
 import nl.rrvk.pokemonspawnlocation.R;
-import nl.rrvk.pokemonspawnlocation.fragments.WebFragment;
 import nl.rrvk.pokemonspawnlocation.fragments.MapFragment;
+import nl.rrvk.pokemonspawnlocation.fragments.PokemonSettingFragment;
 
 public class FragmentFactory {
 
@@ -26,9 +26,9 @@ public class FragmentFactory {
     public Fragment createFragment(String item) {
         Fragment toReturn = null;
         // TODO get existing fragment with fragmentManager;
-        /*if (equals(R.string.nav_pokevision, item)) {
-            toReturn = new WebFragment();
-        } else */if (equals(R.string.nav_map, item)) {
+        if (equals(R.string.nav_notification_settings, item)) {
+            toReturn = new PokemonSettingFragment();
+        } else if (equals(R.string.nav_map, item)) {
             toReturn = new MapFragment();
         } /*else if (equals(R.string.nav_observations, item)) {
             toReturn = new ObservationFragment();

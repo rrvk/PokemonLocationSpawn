@@ -6,4 +6,10 @@
     <dimen name="drawer_min_width">100dp</dimen>
     <dimen name="drawer_item_margin">12dp</dimen>
     <dimen name="drawer_item_padding">8dp</dimen>
+
+    <dimen name="notification_icon_margin_left">2dp</dimen>
+    <dimen name="notification_text_margin_left">52dp</dimen>
+    <dimen name="notification_check1_margin_left">150dp</dimen>
+    <dimen name="notification_check2_margin_left">250dp</dimen>
+    <dimen name="notification_check_margin_top">2dp</dimen>
 </resources>
